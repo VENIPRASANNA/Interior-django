@@ -1,0 +1,92 @@
+body {
+  font-family: "arial";
+  font-weight: bold;
+  margin: 20;
+  padding: 0;
+  background-color: rgb(135, 98, 71);
+}
+
+/* Service Section Styles */
+.service {
+  background-color: #faf6f6;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  list-style: none;
+}
+
+.service h2 {
+  color: brown;
+  font-size: 34px;
+  margin-bottom: 10px;
+  font-family: "monospace";
+}
+
+.service h3 {
+  color: brown;
+  font-size: 44px;
+  margin-bottom: 10px;
+  font-family: "monospace";
+}
+
+.service ul {
+  font-family: arial, Consolas;
+  list-style-type: circle;
+  margin-left: 20px;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.service p {
+  font-size: 16px;
+  color: #b5651d;
+  line-height: 1.6;
+}
+
+
+
+.image-container {
+  display: grid;
+  gap: 50px;
+  width: 100%;
+  height: max-content;
+  display: flex;
+}
+
+.image-container1 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
+
+.image-container1 img {
+  width: 360px;
+  height: 240px; /* Adjusted for proportion - can be customized */
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.image-container img {
+  width: 370px;
+  height: 266px;
+  align-items: center;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+}
+
+.image-container img:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+
+/* Strong text for headings */
+strong {
+  color: #2c3e50;
+  font-weight: bold;
+}

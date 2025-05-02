@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% load static %}
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Fixtures!</title>
+    <link rel="stylesheet" href="{% static 'myapp/css/style.css' %}" />
+  </head>
+  <body>
+    <div class="entire-pageH">
+      <div class="FI">
+        <div class="navsdad">
+          <div class="title">
+            <img class="logo" src="{% static 'myapp/image/logo.png' %}" alt="img" />
+            <h1 class="WN">HOME FIXTURES</h1>
+          </div>
+          <nav class="navs">
+            <div class="Nlink">
+              <img id="imglogo" src="{% static 'myapp/image/menu-bar.png' %}" alt="menu" />
+              <li><a href="{% url 'index'%}">Home</a></li>
+              <li><a href="{% url 'design' %}">Designs</a></li>
+              <li><a href="{% url 'project' %}">Services</a></li>
+              <li><a href="{% url 'contact' %}">ContactUs</a></li>
+            </div>
+          </nav>
+        </div>
+        <div class="con-H">
+          <div>
+            <h1>Welcome to Home Fixtures<br />Make your dream space!!</h1>
+          </div>
+        </div>
+        <div class="explore">
+          <a href="#things">
+            <div>
+              <h1>EXPLORE</h1>
+              <p>^</p>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div id="things" class="things">
+        <div class="part1">
+          <h1>About us:</h1>
+          <p>We believe that great design transforms spaces and enriches lives. With a passion for creativity and a keen eye for detail, our team of experienced interior designers works closely with clients to bring their visions to life<br>. Whether it's a cozy home makeover or a bold commercial project, we blend functionality with aesthetics to create spaces that are both beautiful and uniquely personal.</p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document
+        .querySelector(".explore a")
+        .addEventListener("click", function (e) {
+          e.preventDefault(); // Prevent default anchor behavior
+          document
+            .getElementById("things")
+            .scrollIntoView({ behavior: "smooth" });
+        });
+    </script>
+  </body>
+</html>

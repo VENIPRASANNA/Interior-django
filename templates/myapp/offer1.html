@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Design Showcase | Home Fixtures</title>
+  <style>
+    /* Reset default margins and paddings */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Set the background image to cover the entire viewport */
+    body {
+      height: 100vh;
+      background: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1400&q=80') no-repeat center center fixed;
+      background-size: cover;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    /* Overlay to darken the background for better text readability */
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+
+    /* Centered content container */
+    .content {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: rgba(255, 255, 255, 0.95);
+      padding: 30px;
+      border-radius: 16px;
+      max-width: 600px;
+      width: 90%;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+      text-align: center;
+    }
+
+    /* Heading styles */
+    .content h1 {
+      font-size: 2.5em;
+      color: #2d2d2d;
+      margin-bottom: 20px;
+    }
+
+    /* Paragraph styles */
+    .content p {
+      font-size: 1.1em;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    /* Label styles */
+    .label {
+      font-weight: bold;
+      color: #555;
+    }
+
+    /* Price highlight */
+    .price {
+      font-size: 1.4em;
+      color: #007b5e;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+
+    /* Styled button */
+    .btn {
+      display: inline-block;
+      margin-top: 25px;
+      padding: 12px 24px;
+      background-color: #9c420e;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-size: 1em;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      text-decoration: none;
+    }
+
+    .btn:hover {
+      background-color: #140c03;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 600px) {
+      .content {
+        padding: 20px;
+      }
+
+      .content h1 {
+        font-size: 2em;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Overlay to darken the background -->
+  <div class="overlay"></div>
+
+  <!-- Centered content box -->
+  <div class="content">
+    <h1>Modern Home</h1>
+    <p><span class="label">Model:</span> ML-2025</p>
+    <p><span class="label">Cost:</span> 1,75,000</p>
+    <p><span class="label">Description:</span> A sleek and modern living space that blends comfort with sophistication. Featuring soft tones, premium textures, and an open layout perfect for both relaxation and entertaining guests.</p>
+    <p class="price">Price: 1,22,000</p>
+    <a href="req.html" class="btn">Make your Custamaization</a>
+  </div>
+
+</body>
+</html>

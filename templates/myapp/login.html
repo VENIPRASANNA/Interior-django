@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto:wght@400;500&display=swap">
+    <link rel="stylesheet" href="{% static 'myapp/CSS/login.css'%}">
+    <style>
+        /* Optional basic styling */
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+        .btn {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="login-card">
+            <div class="card-left">
+                <div class="image-cover">
+                    <img src="{% static 'myapp/image/ho.jpeg' %}" alt="Decorative Furniture Image">
+                </div>
+            </div>
+
+            <div class="card-right">
+                <h1 class="title">Home Fixtures</h1>
+                <h2 class="welcome">Welcome to Home fixtures</h2>
+
+                <!-- Updated form with onsubmit handler -->
+                <form onsubmit="return handleLogin(event)">
+                    <div class="input-group">
+                        <label for="username">Username or Email</label>
+                        <input type="text" id="username" name="username" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+
+                    <div class="actions">
+                        <a href="{% url 'index' %}" class="btn" >Sign In</a>
+                        <a href="#" class="forgot-password">Forgot password?</a>
+                    </div>
+
+                    <div class="or-divider">or</div>
+
+                    <div class="google-signin">
+                        <button type="button" class="btn google-btn">Sign in with Google</button>
+                    </div>
+
+                    <div class="create-account">
+                        <p>New to Home fixtures? <a href="#">Create Account</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript to handle validation and redirection -->
+    <script>
+        function handleLogin(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            const form = event.target;
+            if (form.checkValidity()) {
+                // Form is valid - you can add custom login logic here
+                // For now, just redirect to index.html
+                window.location.href = "./index.html";
+            } else {
+                // Show built-in validation messages
+                form.reportValidity();
+            }
+        }
+    </script>
+</body>
+</html>

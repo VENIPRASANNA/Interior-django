@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% load static %}
+  <meta charset="UTF-8">
+  <title>Recent Projects</title>
+    <link rel="stylesheet" href="{% static 'myapp/CSS/style.css' %}">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #6a2706; /* Rich brown background */
+      font-family: 'Arial', sans-serif;
+      min-height: 100vh;
+      color: #f5f5f5;
+    }
+
+    header {
+      text-align: center;
+      padding: 30px 20px;
+      background: linear-gradient(135deg, #792e03 0%, #7e2904 100%);
+      color: white;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    }
+
+    header p {
+      font-size: 1.1rem;
+      opacity: 0.9;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+      padding: 0 40px;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .grid-item {
+      background: linear-gradient(145deg, #020202 0%, #080808 100%);
+      border-radius: 15px;
+      padding: 25px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      transition: all 0.4s ease;
+      border: 1px solid #2e1203;
+      width: 100%;
+    }
+
+    .grid-item:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+    }
+
+    .video-container {
+      width: 100%;
+      border-radius: 10px;
+      overflow: hidden;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .grid-item video {
+      width: 100%;
+      height: 280px; /* Increased video height */
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+
+    .grid-item:hover video {
+      transform: scale(1.03);
+    }
+
+    .model-name {
+      font-size: 1.6rem; /* Slightly larger */
+      margin: 15px 0 10px;
+      font-weight: 600;
+      color: #f8d7a4;
+      text-align: center;
+    }
+
+    .project-details {
+      text-align: center;
+      color: #d9c7a7;
+      margin-bottom: 20px;
+      font-size: 1.05rem;
+      line-height: 1.5;
+      padding: 0 10px;
+    }
+
+    .button-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .order-button {
+      padding: 14px 35px;
+      font-size: 1rem;
+      background: linear-gradient(to right, #c79b5a, #d4a35e);
+      color: #3a2c1a;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: all 0.4s ease;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(199, 155, 90, 0.3);
+      z-index: 1;
+      min-width: 220px; /* Wider button */
+    }
+
+    .order-button::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to right, #d4a35e, #c79b5a);
+      z-index: -1;
+      transition: opacity 0.4s ease;
+      opacity: 0;
+    }
+
+    .order-button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(199, 155, 90, 0.4);
+    }
+
+    .order-button:hover::before {
+      opacity: 1;
+    }
+
+    .order-button a {
+      color: #3a2c1a;
+      text-decoration: none;
+      display: block;
+      position: relative;
+    }
+
+    .order-button:hover::after {
+      transform: translateX(4px);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Recent Projects</h1>
+    <p>Explore our latest interior design masterpieces</p>
+  </header>
+
+  <div class="grid-container">
+    <!-- Top Row -->
+    <div class="grid-item">
+      <div class="video-container">
+        <video src="{% static 'myapp/image/recent2.mp4' %}" autoplay muted loop></video>
+      </div>
+      <div class="model-name">Modern Minimalist Home</div>
+      <div class="project-details">Clean lines, neutral palette, and functional elegance that transforms your living space</div>
+      <div class="button-container">
+        <button class="order-button"><a href="{% url 'int1' %}">Place Order</a></button>
+      </div>
+    </div>
+    
+    <div class="grid-item">
+      <div class="video-container">
+        <video src="{% static 'myapp/image/recent3.mp4' %}" autoplay muted loop></video>
+      </div>
+      <div class="model-name">Industrial Design</div>
+      <div class="project-details">Exposed materials meet modern sophistication in this urban-inspired space</div>
+      <div class="button-container">
+        <button class="order-button"><a href="{% url 'int2' %}">Place Order</a></button>
+      </div>
+    </div>
+    
+    <!-- Bottom Row -->
+    <div class="grid-item">
+      <div class="video-container">
+        <video src="{% static 'myapp/image/reccent4.mp4' %}" autoplay muted loop></video>
+      </div>
+      <div class="model-name">Elegant Home</div>
+      <div class="project-details">Warm minimalism with organic materials for the perfect night's rest</div>
+      <div class="button-container">
+        <button class="order-button"><a href="{% url 'int1' %}">Place Order</a></button>
+      </div>
+    </div>
+    
+    <div class="grid-item">
+      <div class="video-container">
+        <video src="{% static 'myapp/image/recent5.mp4' %}" autoplay muted loop></video>
+      </div>
+      <div class="model-name">Luxury Home</div>
+      <div class="project-details">Premium finishes with smart functionality for the heart of your home</div>
+      <div class="button-container">
+        <button class="order-button"><a href="{% url 'int2' %}">Place Order</a></button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

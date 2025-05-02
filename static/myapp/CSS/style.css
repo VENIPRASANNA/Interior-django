@@ -1,0 +1,285 @@
+/* =-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-= */
+/* IMPORTED THINGS */
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&family=Playwrite+NL+Guides&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
+/* =-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-= */
+
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+  overflow-x: none;
+  font-family: "Raleway", serif;
+  scrollbar-width: none;
+}
+
+body {
+  background-color: hsl(0, 0%, 12%);
+}
+
+.entire-pageH {
+  width: 100%;
+  max-width: 100rem;
+  min-width: 80rem;
+  margin: auto;
+  text-align: center;
+  /* align-items: center; */
+  position: relative;
+}
+/* -=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+.FI {
+   background: linear-gradient(hsla(0, 0%, 0%, 0.514), rgba(0, 0, 0, 0.883)),
+            url("/static/myapp/image/home1.jpg") center / cover;
+   height: 45rem;
+}
+/* -==-=-==-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-==-=--=--=-=-=-= */
+
+.title {
+  background-color: rgb(143, 71, 0);
+  width: 22rem;
+  padding: 0.4rem 0.8rem;
+  border-radius: 0rem 0rem 1rem 1rem;
+  margin-left: 36%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.logo {
+  height: 3rem;
+  width: 3rem;
+}
+
+.WN {
+  /* color: hsl(31, 100%, 82%); */
+  user-select: none;
+  /* text-align: center; 
+  left: 0px; */
+}
+
+/* -==-=-==-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-==-=--=--=-=-=-= */
+/* nav functions */
+/* -==-=-==-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-==-=--=--=-=-=-= */
+
+.navsdad {
+  z-index: 11;
+  position: sticky;
+  top: 0;
+  width: 100rem;
+  /* background-color: red; */
+  max-width: 100rem;
+}
+
+.navs {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  /* background: red; */
+}
+
+.navs:hover {
+  left: 0.5rem;
+}
+
+.navs img {
+  height: 1.5em;
+  width: 1.5em;
+}
+
+.Nlink:hover {
+  display: grid;
+  grid-template-areas:
+    "d"
+    "p"
+    "pp"
+    "c";
+  gap: 1rem;
+  text-align: left;
+  background-color: rgb(143, 71, 0);
+  padding: 0.7rem;
+  border-radius: 0.5rem;
+  /* hover */
+  font-size: medium;
+  width: 7rem;
+  height: 13rem;
+}
+
+.Nlink {
+  font-size: 0px;
+  background-color: rgb(143, 71, 0);
+  transition: all 0.3s ease-in;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 5rem;
+  user-select: none;
+}
+
+.Nlink img {
+  height: 2.5rem;
+  width: 2rem;
+  margin-top: 0.2rem;
+}
+
+.Nlink:hover #imglogo {
+  display: none;
+}
+
+.Nlink li {
+  list-style: none;
+  border-radius: 0.4rem;
+  padding: 0.2rem;
+}
+
+.Nlink li:hover {
+  background-color: rgb(146, 97, 49);
+}
+
+.Nlink a {
+  text-decoration: none;
+  color: white;
+}
+
+/* -==-=-==-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-==-=--=--=-=-=-= */
+
+.con-H {
+  /* background-color: red; */
+  height: 31rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.con-H div {
+  height: 30rem;
+  width: 60rem;
+  margin: auto;
+  position: relative;
+}
+
+.con-H h1 {
+  user-select: none;
+  position: absolute;
+  left: 5px;
+  right: 5px;
+  top: 7rem;
+  color: hsl(31, 100%, 82%);
+  text-shadow: 0px 0px 5px black;
+  font-family: "Josefin Sans", serif;
+  font-size: 3.5rem;
+  z-index: 10;
+  /* background-color: rgb(45, 56, 203); */
+  padding: 50px;
+  border-radius: 1rem;
+  background-color: rgba(0, 0, 0, 0.025);
+}
+
+.con-H div .img1 {
+  user-select: none;
+  height: 20.5rem;
+  width: 55rem;
+  /* position: absolute; */
+  margin: auto;
+  margin-top: 9rem;
+}
+
+.explore {
+  /* background-color: hsla(0, 0%, 0%, 0.631); */
+  padding-top: 0.2rem;
+  font-family: "Josefin Sans", serif;
+  height: 6rem;
+  /* margin-bottom: 1rem; */
+  transition: all 1s ease-in-out;
+  user-select: none;
+}
+
+.explore div {
+  height: 2.8rem;
+  overflow: hidden;
+  width: 11.5rem;
+  margin: auto;
+  transition: all 1s ease-in-out;
+}
+
+.explore:hover div {
+  box-shadow: 0px 0px 10px hsl(30, 38%, 43%);
+  border-radius: 1rem;
+  background-color: hsla(0, 0%, 0%, 0.788);
+}
+
+.explore h1 {
+  font-size: 2.5rem;
+  font-weight: 900;
+  /* height: 3rem; */
+  color: rgb(146, 97, 49);
+  text-shadow: 0px 0px 5px hsl(30, 38%, 43%);
+  transition: all 0.5s ease-in-out;
+}
+
+.explore a {
+  text-decoration: none;
+  color: rgb(255, 201, 146);
+}
+
+.explore p {
+  font-size: 2rem;
+  font-weight: 800;
+  transform: translatey(100%);
+  transition: all 0.5s ease-in-out;
+  text-shadow: 0px 0px 5px hsl(30, 38%, 43%);
+}
+
+.explore:hover p {
+  transform: translateY(-100%);
+}
+
+.explore:hover h1 {
+  transform: translateY(-100%);
+}
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+.things {
+  height: 50rem;
+  width: 100%;
+  padding: 2rem;
+  background: linear-gradient(hsla(0, 0%, 0%, 0.514), rgba(0, 0, 0, 0.883)),
+      url("/static/myapp/image/second.jpg") center / cover;
+  backface-visibility: inherit;
+
+  display: grid;
+  grid-template-areas:
+    "part1"
+    "part2";
+  gap: 2rem;
+  grid-template-rows: 1fr 1fr;
+  font-family: "Josefin Sans", serif;
+  color: hsl(31, 100%, 82%);
+  text-shadow: 0px 0px 5px black;
+}
+
+.part2 {
+  grid-area: part2;
+  /* background-color: red; */
+  display: grid;
+  grid-template-areas: "left2 right2";
+  grid-template-columns: 2fr 1fr;
+}
+
+.icon {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  color: #e67e22;
+}
+
+.part1 h1 {
+  font-size: 90px;
+  margin-bottom: 20px;
+  color: #fcfdfd;
+}
+
+.part1 p {
+  font-size: 35px;
+  color: #fcfdfd;
+  text-align: center;
+  padding: 90px;
+  margin: 0 auto;
+}

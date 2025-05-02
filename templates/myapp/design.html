@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Interior Design Services</title>
+  <link rel="stylesheet" href="design.css" />
+  {% load static %}
+  <style>
+    .model-info {
+      text-align: center;
+      font-size: 14px;
+      margin-top: 5px;
+      font-style: italic;
+      color: #555;
+    }
+
+    .image-container,
+    .image-container1 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+      gap: 20px;
+      justify-items: center;
+    }
+
+    .image-container a,
+    .image-container div,
+    .image-container1 div {
+      text-align: center;
+    }
+
+    img {
+      width: 360px;
+      height: 240px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head>
+<body>
+  <center>
+    <div class="service">
+      <h3>Customized Interiors</h3>
+    </div>
+  </center>
+
+  <!-- Living Room -->
+  <div class="service">
+    <h2>Living Room Design</h2>
+    <p>Explore customized designs for living rooms with modern furniture and color schemes.</p>
+    <div class="image-container">
+      <a href="{% url 'req' %}">
+        <img src="{% static 'myapp/image/living.jpg' %}" alt="Living 1" />
+        <p class="model-info">Model: Urban Classic | Cost: ₹45,000</p>
+      </a>
+      <a href="req.html">
+        <img src="https://www.home-designing.com/wp-content/uploads/2015/10/Art-Deco-living-room.jpg" alt="Living 2" />
+        <p class="model-info">Model: Art Deco Luxe | Cost: ₹58,000</p>
+      </a>
+      <a href="req.html">
+        <img src="{% static 'myapp/image/room3.jpg' %}" alt="Living 3" />
+        <p class="model-info">Model: Cosy Retreat | Cost: ₹49,500</p>
+      </a>
+      <a href="req.html">
+        <img src="{% static 'myapp/image/room2.jpeg' %}" alt="Living 4" />
+        <p class="model-info">Model: Minimal Chic | Cost: ₹42,000</p>
+      </a>
+    </div>
+  </div>
+
+  <!-- Balcony -->
+  <div class="service">
+    <h3>Balcony Design</h3>
+    <p>"Create a tranquil retreat in your own backyard with a beautifully designed balcony..."</p>
+    <div class="image-container">
+      <div>
+        <img src="{% static 'myapp/image/ball.jpg' %}" alt="Balcony 1" />
+        <p class="model-info">Model: Garden Glow | Cost: ₹35,000</p>
+      </div>
+      <div>
+        <img src="https://static.asianpaints.com/content/dam/asianpaintsbeautifulhomes/gallery/balcony-design/modern-balcony-with-tropical-wallpaper-and-glass-railing/glass-balcony-design.jpg.transform/bh-image-gallery/image.webp.jpg" alt="Balcony 2" />
+        <p class="model-info">Model: Glass Serenity | Cost: ₹39,000</p>
+      </div>
+      <div>
+        <img src="https://storage.googleapis.com/redbrics-prod-backend.appspot.com/blog/images/_1664533064081_Add-a-Rustic-Charm.webp" alt="Balcony 3" />
+        <p class="model-info">Model: Rustic Charm | Cost: ₹32,500</p>
+      </div>
+      <div>
+        <img src="https://dropinblog.net/34246798/files/featured/Balcony_Design_Ideas-0_.jpg" alt="Balcony 4" />
+        <p class="model-info">Model: Cozy Nest | Cost: ₹30,000</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dining Room -->
+  <div class="service">
+    <h3>Dining Room</h3>
+    <p>"Create warm and inviting dining experiences with a beautifully designed dining room..."</p>
+    <div class="image-container1">
+      <div>
+        <img src="https://birchwoodfurniture.ca/wp-content/uploads/2023/11/How-To-Set-A-Dining-Table-Based-on-Shape_support-768x504.jpg" alt="Dining 1" />
+        <p class="model-info">Model: Elegant Curve | Cost: ₹55,000</p>
+      </div>
+      <div>
+        <img src="https://www.decorpot.com/images/112562550215-classic-dining-room-design-ideas-2024.jpg" alt="Dining 2" />
+        <p class="model-info">Model: Classic Comfort | Cost: ₹52,000</p>
+      </div>
+      <div>
+        <img src="https://www.decorpot.com/images/blogimage1274902076colour-changing-lighting.jpg" alt="Dining 3" />
+        <p class="model-info">Model: LightScape Dine | Cost: ₹59,000</p>
+      </div>
+      <div>
+        <img src="https://www.decorpot.com/images/blogimage915076722interactive-wall-art.jpg" alt="Dining 4" />
+        <p class="model-info">Model: ArtEdge Dining | Cost: ₹60,000</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Kitchen -->
+  <div class="service">
+    <h3>Kitchen</h3>
+    <p>"The heart of every home, our kitchen is designed to inspire culinary creativity..."</p>
+    <div class="image-container1">
+      <div>
+        <img src="https://media.designcafe.com/wp-content/uploads/2020/06/27211747/wardrobe-design-for-kitchen.jpg" alt="Kitchen 1" />
+        <p class="model-info">Model: Modular Wood | Cost: ₹70,000</p>
+      </div>
+      <div>
+        <img src="https://media.designcafe.com/wp-content/uploads/2020/06/29092251/island-open-kitchen-wardrobe-design.jpg" alt="Kitchen 2" />
+        <p class="model-info">Model: Island Modern | Cost: ₹75,000</p>
+      </div>
+      <div>
+        <img src="https://media.designcafe.com/wp-content/uploads/2020/06/27210813/natural-brown-wooden-wardrobe-designs-for-kitchen.jpg" alt="Kitchen 3" />
+        <p class="model-info">Model: Brown Tone | Cost: ₹68,000</p>
+      </div>
+      <div>
+        <img src="{% static 'myapp/image/kit.jpg' %}" alt="Kitchen 4" />
+        <p class="model-info">Model: Elegant Chef | Cost: ₹72,000</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bedroom -->
+  <div class="service">
+    <h3>Bedroom</h3>
+    <p>"Retreat to serenity with our bespoke bedroom designs. Merging soothing colors..."</p>
+    <div class="image-container1">
+      <div>
+        <img src="https://cdn.shopify.com/s/files/1/1482/2692/files/stylish-luxury-bedroom.jpg?v=1690474157" alt="Bedroom 1" />
+        <p class="model-info">Model: Luxury Dream | Cost: ₹88,000</p>
+      </div>
+      <div>
+        <img src="https://cdn.shopify.com/s/files/1/1482/2692/files/modern-elegance-luxury-cozy-bedroom.jpg?v=1690474169" alt="Bedroom 2" />
+        <p class="model-info">Model: Modern Elegance | Cost: ₹90,000</p>
+      </div>
+      <div>
+        <img src="https://cdn.shopify.com/s/files/1/1482/2692/files/luxury-bedroom-1.jpg?v=1690474179" alt="Bedroom 3" />
+        <p class="model-info">Model: Plush Comfort | Cost: ₹85,000</p>
+      </div>
+      <div>
+        <img src="https://foyr.com/learn/wp-content/uploads/2021/09/master-bedroom-essentials-1024x669.png" alt="Bedroom 4" />
+        <p class="model-info">Model: Master Zen | Cost: ₹92,000</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

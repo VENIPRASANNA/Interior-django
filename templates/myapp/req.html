@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Fixtures</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-image: url("{% static 'myapp/image/pex.jpg' %}");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: #fff;
+        }
+
+        .overlay {
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 40px;
+            min-height: 100vh;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2.5rem;
+        }
+
+        .requirements {
+            max-width: 800px;
+            margin: auto;
+            background: rgba(161, 19, 14, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .requirements h2 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #fff;
+            padding-bottom: 5px;
+        }
+
+        .options label {
+            display: block;
+            margin: 5px 0;
+        }
+
+        .opinion-box {
+            margin-top: 30px;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .opinion-box textarea {
+            width: 100%;
+            height: 150px;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            font-family: Arial, sans-serif;
+            resize: none;
+        }
+
+        .opinion-box button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #864626;
+            color: white;
+            cursor: pointer;
+        }
+
+        .opinion-box button:hover {
+            background-color: #eb3d0c;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="overlay">
+        <h1>Interior Design Requirements</h1>
+        <form action="{% url 'order' %}" method="GET">
+            <div class="requirements">
+                <h2>Project Overview</h2>
+                <div class="options">
+                    <label>Type:</label>
+                    <label><input type="radio" name="type" value="Residential" required> Residential</label>
+                    <label><input type="radio" name="type" value="Commercial"> Commercial</label>
+                </div>
+
+                <div class="options">
+                    <label>Style:</label>
+                    <label><input type="radio" name="style" value="Modern" required> Modern</label>
+                    <label><input type="radio" name="style" value="Minimalist"> Minimalist</label>
+                    <label><input type="radio" name="style" value="Bohemian"> Bohemian</label>
+                </div>
+
+                <div class="options">
+                    <label>Space:</label>
+                    <label><input type="radio" name="space" value="Living Room" required> Living Room</label>
+                    <label><input type="radio" name="space" value="Bedroom"> Bedroom</label>
+                    <label><input type="radio" name="space" value="Office"> Office</label>
+                </div>
+
+                <h2>Client Preferences</h2>
+                <div class="options">
+                    <label>Color Palette:</label>
+                    <label><input type="radio" name="color" value="Neutral" required> Neutral</label>
+                    <label><input type="radio" name="color" value="Bold"> Bold</label>
+                    <label><input type="radio" name="color" value="Pastels"> Pastels</label>
+                </div>
+
+                <div class="options">
+                    <label>Materials:</label>
+                    <label><input type="radio" name="material" value="Wood" required> Wood</label>
+                    <label><input type="radio" name="material" value="Metal"> Metal</label>
+                    <label><input type="radio" name="material" value="Glass"> Glass</label>
+                    <label><input type="radio" name="material" value="Fabric"> Fabric</label>
+                </div>
+
+                <div class="options">
+                    <label>Lighting:</label>
+                    <label><input type="radio" name="lighting" value="Natural" required> Natural</label>
+                    <label><input type="radio" name="lighting" value="Ambient"> Ambient</label>
+                    <label><input type="radio" name="lighting" value="Accent"> Accent</label>
+                </div>
+
+                <div class="opinion-box">
+                    <h2>Further Customization</h2>
+                    <textarea name="opinion" placeholder="Share your thoughts or suggestions..." required></textarea>
+                    <button type="submit">Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

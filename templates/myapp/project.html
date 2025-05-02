@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elegance Interiors | Premium Design Solutions</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'css/project.css' %}">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        body {
+            background-color: rgba(132, 46, 3, 0.889);
+            color: var(--light);
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px; 
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            text-align: center;
+            padding: 30px 0; 
+            position: relative;
+        }
+        
+        header h1 {
+            font-size: 2.2rem; /* Slightly smaller */
+            color: var(--primary);
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+            padding: 15px 30px; /* Added padding for the border box */
+            border: 3px solid var(--accent); /* Added border */
+            border-radius: 8px; /* Rounded corners */
+            background-color: rgba(255, 255, 255, 0.1); /* Slight background */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Added shadow */
+        }
+        
+        header h1::after {
+            content: '';
+            position: absolute;
+            bottom: -8px; /* Smaller underline */
+            left: 50%;
+            transform: translateX(-50%);
+            width: 70px; /* Shorter underline */
+            height: 2px;
+            background-color: var(--accent);
+        }
+        
+        header p {
+            font-size: 1rem; /* Smaller text */
+            color: var(--primary);
+        }
+        
+        .content {
+            display: flex;
+            align-items: center;
+            margin: 40px 0; /* Reduced margin */
+            gap: 30px; /* Smaller gap */
+        }
+        
+        .reverse {
+            flex-direction: row-reverse;
+        }
+        
+        .image-text {
+            flex: 1;
+            overflow: hidden;
+            border-radius: 8px; /* Slightly rounded */
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+            border: 2px solid var(--accent); /* Added border */
+        }
+        
+        .image-text img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.5s ease;
+            display: block;
+        }
+        
+        .image-text:hover img {
+            transform: scale(1.03); /* More subtle zoom */
+        }
+        
+        .text-box {
+            flex: 1;
+            padding: 20px; /* Reduced padding */
+        }
+        
+        .text-box h2 {
+            font-size: 1.6rem; /* Smaller heading */
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+        
+        .text-box p {
+            margin-bottom: 20px;
+            font-size: 20px; /* Smaller text */
+            color: var(--light);
+        }
+        
+        button {
+            background-color: rgb(185, 169, 169);
+            color: black;
+            border: none;
+            padding: 10px 25px; /* Smaller button */
+            font-size: 0.9rem; /* Smaller text */
+            cursor: pointer;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+            border: 1px solid var(--dark); /* Added border */
+        }
+        
+        button:hover {
+            background-color: var(--accent);
+            transform: translateY(-2px); /* More subtle lift */
+            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+            color: var(--light);
+        }
+        
+        button a {
+            color: inherit;
+            text-decoration: none;
+        }
+        
+        /* Services Section */
+        .services {
+            padding: 60px 0; /* Reduced padding */
+            background-color: rgba(255,255,255,0.1); /* Semi-transparent */
+            text-align: center;
+            border-radius: 10px;
+            margin: 30px 0;
+            backdrop-filter: blur(5px); /* Frosted glass effect */
+            border: 1px solid var(--accent);
+        }
+        
+        .services h2 {
+            font-size: 50px; /* Smaller heading */
+            color: var(--primary);
+            margin-bottom: 40px;
+        }
+        
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Smaller cards */
+            gap: 20px; /* Smaller gap */
+            padding: 0 20px;
+        }
+        
+        .service-card {
+            background: rgba(255,255,255,0.1);
+            padding: 25px; /* Reduced padding */
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid var(--accent);
+            backdrop-filter: blur(3px);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px); /* More subtle lift */
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            background: rgba(255,255,255,0.15);
+        }
+        
+        .service-icon {
+            font-size: 2rem; /* Smaller icons */
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+        
+        .service-card h3 {
+            font-size: 1.2rem; /* Smaller heading */
+            margin-bottom: 12px;
+            color: var(--primary);
+        }
+        
+        .service-card p {
+            font-size: 0.9rem; /* Smaller text */
+            color: var(--light);
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Elegance Interiors</h1>
+        </header>
+        
+        <section class="content">
+            <div class="image-text">
+                <img src="{% static 'myapp/image/room3.jpg' %}"  alt="Stylish Living Room">
+            </div>
+            <div class="text-box">
+                <h2>Proportion and Scale</h2>
+                <p>At Elegance Interiors, we master the balance of scale and proportion to create harmonious spaces that feel both luxurious and welcoming. Our designs follow the golden ratio to achieve visual perfection.</p>
+                <button><a href="{% url 'recent' %}">VIEW PROJECTS</a></button>
+            </div>
+        </section>
+        
+        <section class="content reverse">
+            <div class="text-box">
+                <h2>Why Choose Us?</h2>
+                <p>With over a decade of experience, we bring unparalleled expertise in creating spaces that blend functionality with aesthetic appeal. Our team ensures visual stability and timeless elegance.</p>
+            </div>
+            <div class="image-text">
+                <img src="{% static 'myapp/image/hhh.jpg' %}"  alt="Luxury Dining Space">
+            </div>
+        </section>
+        
+        <section class="services">
+            <h2>Our Premium Services</h2>
+            <div class="service-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>Residential Design</h3>
+                    <p>Complete home transformations tailored to your lifestyle and preferences.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3>Commercial Spaces</h3>
+                    <p>Office, retail, and hospitality designs that enhance brand identity.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-paint-roller"></i>
+                    </div>
+                    <h3>Space Planning</h3>
+                    <p>Optimizing your space for maximum functionality and style.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-couch"></i>
+                    </div>
+                    <h3>Custom Furniture</h3>
+                    <p>Bespoke furniture pieces designed for your space.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3>Lighting Design</h3>
+                    <p>Creating the perfect ambiance through lighting solutions.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3>Color Consultation</h3>
+                    <p>Expert guidance on transformative color schemes.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
